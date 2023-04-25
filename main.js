@@ -11,9 +11,18 @@ const jobTypes = {
 
 // Your code will go here
 
+class CrewMember
+{
+  constructor(_name, _job, _specialSkill)
+  {
+    this.name = _name,
+    this.job = _job,
+    this.specialSkill = _specialSkill,
+    this.ship = null;
+  }
+}
 
-
-
+const crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
 
 
 
