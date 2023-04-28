@@ -18,12 +18,39 @@ class CrewMember
     this.name = _name,
     this.job = _job,
     this.specialSkill = _specialSkill,
-    this.ship = null;
+    this.ship = null
+  }
+
+  enterShip(_ship)
+  {
+    this.ship = _ship
+    _ship.crew.push(this)
   }
 }
 
+class Ship
+{
+  constructor(_name, _type, _ability)
+  {
+    this.name = _name,
+    this.type = _type,
+    this.ability = _ability
+  }
+ 
+  crew = []  
+}
+
+
 const crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
 
+let mav = new Ship('Mars Ascent Vehicle', 'MAV', 'Ascend into low orbit');
+
+console.log(crewMember1.ship)
+crewMember1.enterShip(mav);
+console.log(crewMember1.ship)
+// assert.equal(crewMember1.ship, mav);
+// assert.equal(mav.crew.length, 1);
+// assert.equal(mav.crew[0], crewMember1);
 
 
 // Begin by reading the tests and building a function that will full each one.
