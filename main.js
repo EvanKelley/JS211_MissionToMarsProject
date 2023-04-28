@@ -35,9 +35,21 @@ class Ship
     this.name = _name,
     this.type = _type,
     this.ability = _ability
+    this.crew = []  
   }
- 
-  crew = []  
+  
+  missionStatement()
+  {
+    if (this.crew.length === 0)
+    {
+      return "Can't perform a mission yet."
+    }
+    else if (this.crew.length > 0)
+    {
+      return (this.ability)
+    }
+  }
+
 }
 
 
